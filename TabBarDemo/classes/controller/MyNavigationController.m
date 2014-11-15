@@ -20,6 +20,24 @@
     [navBar setBackgroundImage:[UIImage imageNamed:@"NavBar64"] forBarMetrics:UIBarMetricsDefault];
     [navBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
     
+    //设置导航栏baritem和返回baiitem样式
+    UIBarButtonItem *barItem = [UIBarButtonItem appearance];
+
+    if (IsIOS7) {
+        barItem.tintColor = [UIColor whiteColor];
+        //设置导航栏返回按钮<的颜色
+        navBar.tintColor = [UIColor whiteColor];
+        
+    }else{
+        
+        [barItem setBackgroundImage:[UIImage imageNamed:@"NavButton"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+        [barItem setBackgroundImage:[UIImage imageNamed:@"NavButtonPressed"] forState:UIControlStateHighlighted barMetrics:UIBarMetricsDefault];
+        
+        [barItem setBackButtonBackgroundImage:[UIImage imageNamed:@"NavBackButton"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+        [barItem setBackButtonBackgroundImage:[UIImage imageNamed:@"NavBackButtonPressed"] forState:UIControlStateHighlighted barMetrics:UIBarMetricsDefault];
+    }
+
+    
 }
 
 -(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{

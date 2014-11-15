@@ -132,9 +132,6 @@
                                 <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="177" y="193" width="46" height="30"/>
                                 </variation>
-                                <connections>
-                                    <segue destination="bqg-N9-ERy" kind="push" id="OX2-S4-Xdg"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -143,30 +140,60 @@
                             <constraint firstAttribute="centerY" secondItem="M5V-CA-zoz" secondAttribute="centerY" id="x7F-lF-Bg4"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="购彩大厅" id="CNj-xA-6vY"/>
+                    <navigationItem key="navigationItem" title="购彩大厅" id="CNj-xA-6vY">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="OHT-mJ-5wu">
+                            <connections>
+                                <segue destination="VWw-Im-rJO" kind="push" id="mN2-gt-Itw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jLh-RC-pnR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1652" y="-1529"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="mVd-Rd-Rwn">
+        <!--Table View Controller-->
+        <scene sceneID="9yL-ul-hhF">
             <objects>
-                <viewController id="bqg-N9-ERy" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="iCz-c8-Fr0"/>
-                        <viewControllerLayoutGuide type="bottom" id="8BE-cE-Xnu"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="pJW-7H-qIH">
+                <tableViewController id="VWw-Im-rJO" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Hit-sG-Lqx">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="eTr-NN-Ixx"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LFc-wr-KYf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="dB7-W5-kAc">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="Xma-3N-gVj">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xma-3N-gVj" id="fgT-p1-RzA">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="0e3-Gy-P6D">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0e3-Gy-P6D" id="C3K-CD-Do0">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="xrm-f4-oRM">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xrm-f4-oRM" id="08D-HZ-HMx">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="VWw-Im-rJO" id="H1h-2p-HFb"/>
+                            <outlet property="delegate" destination="VWw-Im-rJO" id="V0W-7k-caY"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="GO7-4I-KzB"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Yq-Vc-X93" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-440" y="-1501"/>
+            <point key="canvasLocation" x="-993" y="-1529"/>
         </scene>
         <!--合买跟单-->
         <scene sceneID="ioa-ih-VUY">
